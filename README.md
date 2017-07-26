@@ -5,11 +5,9 @@ Basically im putting up my reusable code on github. This is a simple modal frame
 
 usage: 
 
-`
-var jtSimpleModal = new JT_Simple_Modal();
-var options = {};
-jtSimpleModal.openModal(options);
-`
+`var jtSimpleModal = new JT_Simple_Modal();`
+`var options = {};`
+`jtSimpleModal.openModal(options);`
 
 
     this.options = {
