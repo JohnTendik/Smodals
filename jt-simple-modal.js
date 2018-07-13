@@ -9,7 +9,8 @@ function JT_Simple_Modal(){
         headerIcon: "",
         bodyIcon: "",
         type: "alert",
-        inputType: "text"
+        inputType: "text",
+        confirmBtnText: 'OK'
     }
 
     this.openModal = function(args,callback){
@@ -24,6 +25,11 @@ function JT_Simple_Modal(){
             callback(formData);
             thisIs.closeModal();
         });
+        jQuery('#jt-simple-modal').on('click','#jt-simple-modal-confirm',function(evnt){
+            callback(this, evnt);
+            thisIs.closeModal();
+        });
+        
     }
 
     this.closeModal = function(){
@@ -34,7 +40,7 @@ function JT_Simple_Modal(){
         if(type == "prompt"){
             var modalHtml = "<div id='jt-simple-modal'>";
             modalHtml += "<div id='jt-simple-modal-container'>";
-            modalHtml += "<div id='jt-simple-modal-header'><i class='fa "+this.options.headerIcon+"' aria-hidden='true'></i> <small>"+this.options.header+"</small><i class='fa fa-times' id='jt-simple-modal-close' aria-hidden='true'></i></div>";
+            modalHtml += "<div id='jt-simple-modal-header'><i class='fa "+this.options.headerIcon+"' aria-hidden='true'></i> <h4>"+this.options.header+"</h4><i class='fa fa-times' id='jt-simple-modal-close' aria-hidden='true'></i></div>";
             modalHtml += "<div id='jt-simple-modal-body'><div class='jt-simple-modal-desc'>";
             modalHtml += "<i class='fa "+this.options.bodyIcon+"' aria-hidden='true'></i> <p>"+this.options.body+"</p></div>";
             modalHtml += "<div class='jt-simple-modal-desc'><form id='jt-simple-modal-form'>";
@@ -42,10 +48,19 @@ function JT_Simple_Modal(){
             modalHtml += '<a href="#" class="btn btn-primary" id="jt-simple-modal-submit">Unlock</a></div>';
             modalHtml += "</div>"
             return modalHtml;
+        }else if(type == "confirm"){
+            var modalHtml = "<div id='jt-simple-modal'>";
+            modalHtml += "<div id='jt-simple-modal-container'>";
+            modalHtml += "<div id='jt-simple-modal-header'><i class='fa "+this.options.headerIcon+"' aria-hidden='true'></i> <h4>"+this.options.header+"</h4><i class='fa fa-times' id='jt-simple-modal-close' aria-hidden='true'></i></div>";
+            modalHtml += "<div id='jt-simple-modal-body'><div class='jt-simple-modal-desc'>";
+            modalHtml += "<i class='fa "+this.options.bodyIcon+"' aria-hidden='true'></i> <p>"+this.options.body+"</p></div><div class='jt-simple-modal-desc'>";
+            modalHtml += '<button href="#" id="jt-simple-modal-confirm">'+ this.options.confirmBtnText +'</button></div>';
+            modalHtml += "</div></div>"
+            return modalHtml;
         }else if(type == "custom"){
             var modalHtml = "<div id='jt-simple-modal'>";
             modalHtml += "<div id='jt-simple-modal-container'>";
-            modalHtml += "<div id='jt-simple-modal-header'><i class='fa "+this.options.headerIcon+"' aria-hidden='true'></i> <small>"+this.options.header+"</small><i class='fa fa-times' id='jt-simple-modal-close' aria-hidden='true'></i></div>";
+            modalHtml += "<div id='jt-simple-modal-header'><i class='fa "+this.options.headerIcon+"' aria-hidden='true'></i> <h4>"+this.options.header+"</h4><i class='fa fa-times' id='jt-simple-modal-close' aria-hidden='true'></i></div>";
             modalHtml += "<div id='jt-simple-modal-body'><div class='jt-simple-modal-desc'>";
             modalHtml += "<i class='fa "+this.options.bodyIcon+"' aria-hidden='true'></i> <p>"+this.options.body+"</p></div>";
             modalHtml += customContent;
@@ -54,7 +69,7 @@ function JT_Simple_Modal(){
         }else{
             var modalHtml = "<div id='jt-simple-modal'>";
             modalHtml += "<div id='jt-simple-modal-container'>";
-            modalHtml += "<div id='jt-simple-modal-header'><i class='fa "+this.options.headerIcon+"' aria-hidden='true'></i> <small>"+this.options.header+"</small><i class='fa fa-times' id='jt-simple-modal-close' aria-hidden='true'></i></div>";
+            modalHtml += "<div id='jt-simple-modal-header'><i class='fa "+this.options.headerIcon+"' aria-hidden='true'></i> <h4>"+this.options.header+"</h4><i class='fa fa-times' id='jt-simple-modal-close' aria-hidden='true'></i></div>";
             modalHtml += "<div id='jt-simple-modal-body'><div class='jt-simple-modal-desc'><i class='fa "+this.options.bodyIcon+"' aria-hidden='true'></i> <p>"+this.options.body+"</p></div></div>";
             return modalHtml;
         }
