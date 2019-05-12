@@ -1,0 +1,40 @@
+{
+  "name": "smodals",
+  "version": "1.0.0",
+  "description": "Super light weight vanilla modals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "babel src -d build",
+    "sass": "node-sass -o build src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnTendik/Smodals.git"
+  },
+  "keywords": [
+    "js",
+    "vanilla",
+    "js",
+    "modals",
+    "pop",
+    "ups",
+    "dialogs",
+    "confirm",
+    "prompt",
+    "javascriptt"
+  ],
+  "author": "John Tendik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnTendik/Smodals/issues"
+  },
+  "homepage": "https://github.com/JohnTendik/Smodals#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {}
+}
