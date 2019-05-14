@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --mode development",
     "build": "babel src -d build",
+    "bwatch": "babel -w src -d build",
+    "swatch": "node-sass -wo build src",
+    "dev": "concurrently \"npm run bwatch\" \"npm run swatch\"",
     "sass": "node-sass -o build src"
   },
   "repository": {
@@ -34,6 +37,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "concurrently": "^4.1.0",
     "node-sass": "^4.12.0"
   },
   "dependencies": {}

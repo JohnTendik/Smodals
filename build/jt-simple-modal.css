@@ -1,4 +1,4 @@
-div#jt-simple-modal {
+div.jt-simple-modal {
   display: none;
   position: fixed;
   top: 0;
@@ -10,54 +10,53 @@ div#jt-simple-modal {
   align-items: center;
   color: #f1f1f1;
   z-index: 99999; }
-
-div#jt-simple-modal div#jt-simple-modal-container {
-  max-width: 400px;
-  width: 70%;
-  background: #f8f8f8;
-  border: solid 1px #ccc;
-  color: #333;
-  border-radius: 2px; }
-
-div#jt-simple-modal div#jt-simple-modal-header {
-  padding: 7px 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-div#jt-simple-modal div#jt-simple-modal-header small {
-  margin-right: auto;
-  margin-left: 8px; }
-
-div#jt-simple-modal div#jt-simple-modal-body .jt-simple-modal-desc {
-  padding: 14px;
-  background: #fefefe;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.jt-simple-modal-desc p {
-  margin: 0; }
-
-div#jt-simple-modal div#jt-simple-modal-body i {
-  font-size: 22px;
-  color: #ccc; }
-
-div#jt-simple-modal div#jt-simple-modal-body p {
-  width: 100%;
-  margin-left: 14px; }
-
-div#jt-simple-modal div#jt-simple-modal-header #jt-simple-modal-close {
-  display: inline-block;
-  float: right;
-  content: "\f00d";
-  font-family: FontAwesome;
-  cursor: pointer; }
-
-div.jt-simple-modal-desc #jt-simple-modal-input {
-  width: 100%; }
-
-div.jt-simple-modal-desc #jt-simple-modal-submit {
-  margin: 0;
-  padding: 5px;
-  border-radius: 0; }
+  div.jt-simple-modal div#jt-simple-modal-container {
+    max-width: 400px;
+    width: 70%;
+    background: #f8f8f8;
+    border: solid 1px #ccc;
+    color: #333;
+    border-radius: 2px; }
+  div.jt-simple-modal div#jt-simple-modal-header {
+    padding: 7px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    div.jt-simple-modal div#jt-simple-modal-header h4 {
+      margin: 0; }
+    div.jt-simple-modal div#jt-simple-modal-header small {
+      margin-right: auto;
+      margin-left: 8px; }
+    div.jt-simple-modal div#jt-simple-modal-header #jt-simple-modal-close {
+      display: inline-block;
+      float: right;
+      content: "\f00d";
+      font-family: FontAwesome;
+      cursor: pointer; }
+  div.jt-simple-modal div#jt-simple-modal-body .jt-simple-modal-desc {
+    padding: 14px;
+    background: #fefefe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    div.jt-simple-modal div#jt-simple-modal-body .jt-simple-modal-desc p {
+      margin: 0; }
+    div.jt-simple-modal div#jt-simple-modal-body .jt-simple-modal-desc #jt-simple-modal-form {
+      width: 100%;
+      margin-bottom: 0;
+      margin-right: 24px; }
+    div.jt-simple-modal div#jt-simple-modal-body .jt-simple-modal-desc #jt-simple-modal-input {
+      width: 100%; }
+    div.jt-simple-modal div#jt-simple-modal-body .jt-simple-modal-desc #jt-simple-modal-submit {
+      margin: 0;
+      padding: 5px 12px;
+      border-radius: 0;
+      text-decoration: none;
+      color: #333;
+      background: #f4f4f4; }
+  div.jt-simple-modal div#jt-simple-modal-body i {
+    font-size: 22px;
+    color: #ccc; }
+  div.jt-simple-modal div#jt-simple-modal-body p {
+    width: 100%;
+    margin-left: 14px; }
